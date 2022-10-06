@@ -23,20 +23,22 @@ refs.btnLoad.style.display = 'none';
 function handleInput(event) {
     
     searchStr = event.target.value.trim().toLowerCase();
-    console.log(searchStr);
+    
     
 };
 
 
 function handleSubmit(event) {
     event.preventDefault();
+    refs.btnLoad.style.display = 'none';
 
     if (searchStr !== '') {
         refs.imagesList.innerHTML = '';
         pageNumber = 1;
         totalImg = 0;
+        
         fetch()
-    } 
+    }
 
     refs.input.value = '';
     
@@ -49,6 +51,7 @@ function fetch() {
             
         if (data.total > 0) {
             if (pageNumber === 1) {
+                
                 Notify.success(`Hooray! We found ${data.totalHits} images.`);
                 }
                 
