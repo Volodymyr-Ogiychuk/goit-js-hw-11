@@ -22,14 +22,3 @@ export const fetchPic = async (searchStr, pageNumber) =>
 
 
     
-// export const fetchPic = searchStr => {
-    
-//     return fetch(`https://pixabay.com/api/?key=30367139-d29baca05590c92d76f2ea65a&q=${searchStr}&image_type=photo&orientation=horizontal&safesearch=true`)
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw new Error(response.status);
-//             }
-//             return response.json();
-//         }
-//         );
-// };
